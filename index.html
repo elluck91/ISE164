@@ -14,6 +14,7 @@
   <!-- <link href="css\materialize.min.css" rel="stylesheet" /> -->
   <link href="css\mdb.min.css" rel="stylesheet" />
   <link href="css\style.min.css" rel="stylesheet" />
+  <link href="css\tree.css" rel="stylesheet" />
 
   <!--     Fonts and icons     -->
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
@@ -41,36 +42,61 @@
     -->
     <div class="logo">
       <a href="http://localhost:8080" class="simple-text">
-        Finsoft
+        PartKeepr
       </a>
     </div>
     <div class="sidebar-wrapper">
-      <ul class="nav">
-        <li class="active">
-          <a href="/">
-            <i class="material-icons">dashboard</i>
-            <p>Dashboard</p>
-          </a>
-        </li>
-        <li>
-          <a href="${pageContext.request.contextPath}/employee">
-            <i class="material-icons">person</i>
-            <p>Add Employee</p>
-          </a>
-        </li>
-        <li>
-          <a href="${pageContext.request.contextPath}/employee/name/A/0">
-            <i class="material-icons">content_paste</i>
-            <p>Employees</p>
-          </a>
-        </li>
-        <li>
-          <a href="${pageContext.request.contextPath}/employee/dept/General/0">
-            <i class="material-icons">bubble_chart</i>
-            <p>Departments</p>
-          </a>
-        </li>
-      </ul>
+        <ul class="tree">
+            <li>
+              <input type="checkbox" checked="checked" id="c1" />
+              <label class="tree_label" for="c1">Level 0</label>
+              <ul>
+                <li class="active">
+                  <input type="checkbox" checked="checked" id="c2" />
+                  <label for="c2" class="tree_label">Level 1</label>
+                  <ul>
+                    <li><span class="tree_label">Level 2</span></li>
+                    <li><span class="tree_label">Level 2</span></li>
+                  </ul>
+                </li>
+                <li>
+                  <input type="checkbox" id="c3" />
+                  <label for="c3" class="tree_label">Looong level 1 </label>
+                  <ul>
+                    <li><span class="tree_label">Level 2</span></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          
+            <li>
+              <input type="checkbox" id="c5" />
+              <label class="tree_label" for="c5">Level 0</label>
+              <ul>
+                <li>
+                  <input type="checkbox" id="c6" />
+                  <label for="c6" class="tree_label">Level 1</label>
+                  <ul>
+                    <li><span class="tree_label">Level 2</span></li>
+                  </ul>
+                </li>
+                <li>
+                  <input type="checkbox" id="c7" />
+                  <label for="c7" class="tree_label">Level 1</label>
+                  <ul>
+                    <li><span class="tree_label">Level 2</span></li>
+                    <li>
+                      <input type="checkbox" id="c8" />
+                      <label for="c8" class="tree_label">Level 2</label>
+                      <ul>
+                        <li><span class="tree_label">Level 3</span></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
     </div>
   </div>
   <div class="main-panel">
